@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "minimum_chrome_version": "116",
+  "name": "填记 · 输入历史",
+  "version": "0.1.0",
+  "description": "记住网页普通输入框的历史值，点击字段旁的按钮搜索并回填。数据仅保存在本机。",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "optional_host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "incognito": "not_allowed",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "填记 · 输入历史"
+  },
+  "options_page": "manager.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuyWqaRZQ/JRxPTz35uqCowJWx4+KmF9YdHxs8yDNlTIhKGA7P6Iy81NnmRVobTxDq+vhvHoT56/6aJrbxVj8niBm+IEPhFQ+4JANskV2jhKjcIPO59xK1Ihd05RQKKZ+N26RsSHqCsoWjLUd99m+ND4bYtKnZ/suMt+pJ503DtBHuzWLarpTd25GjXf6g5hIc0+gSNiOIYzH041mC3t5gOcR2nVPOJhyOC6hmjXsOc5SvMZ6mSBVJJuDafmnv77Rr4f0O2w5vZ2FEzl4DRdzGh+V92yv+xh38eyoFb+yTpAsg9IsHdMPrYTZZGFXjai0TJZufl4q/P6P7ghhDHMsXQIDAQAB"
+}
